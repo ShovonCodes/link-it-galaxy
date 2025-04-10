@@ -1,7 +1,7 @@
 
 import { cn } from "@/lib/utils";
 import { ElementCategory } from "@/data/elementsData";
-import { Leaf, Cloud, Apple, Mountains, Fish } from "lucide-react";
+import { Leaf, Cloud, Apple, Mountain, Fish } from "lucide-react";
 
 interface ElementCardProps {
   name: string;
@@ -27,7 +27,7 @@ const ElementCard = ({
       case "food":
         return <Apple className="w-12 h-12 text-red-400" />;
       case "mineral":
-        return <Mountains className="w-12 h-12 text-gray-400" />;
+        return <Mountain className="w-12 h-12 text-gray-400" />;
       case "weather":
         return <Cloud className="w-12 h-12 text-sky-400" />;
       default:
