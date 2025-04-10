@@ -1,7 +1,11 @@
 
 import { cn } from "@/lib/utils";
 import { ElementCategory } from "@/data/elementsData";
-import { Leaf, Cloud, Apple, Mountain, Fish } from "lucide-react";
+import { 
+  Leaf, Cloud, Apple, Mountain, Fish, Bird, Bear, Rabbit, 
+  TreePine, Flower, Mushroom, Cherry, Wheat, CupSoda, 
+  Water, Rock, Snowflake, Sun, Wind, Rainbow 
+} from "lucide-react";
 import { useState } from "react";
 
 interface ElementCardProps {
@@ -20,6 +24,64 @@ const ElementCard = ({
   isSelected = false
 }: ElementCardProps) => {
   const [imageError, setImageError] = useState(false);
+
+  const getElementIcon = () => {
+    // Choose specific icon based on element name first
+    switch (name.toLowerCase()) {
+      // Animals
+      case "wolf": return <Bear className="w-12 h-12 text-gray-400" />;
+      case "sheep": return <Rabbit className="w-12 h-12 text-gray-200" />;
+      case "bird": return <Bird className="w-12 h-12 text-sky-400" />;
+      case "fish": return <Fish className="w-12 h-12 text-blue-400" />;
+      case "bee": return <Leaf className="w-12 h-12 text-yellow-400" />;
+      case "butterfly": return <Flower className="w-10 h-10 text-pink-400" />;
+      case "frog": return <Fish className="w-12 h-12 text-green-500" />;
+      case "bear": return <Bear className="w-12 h-12 text-brown-400" />;
+      case "deer": return <Rabbit className="w-12 h-12 text-amber-600" />;
+      case "owl": return <Bird className="w-12 h-12 text-amber-800" />;
+      
+      // Plants
+      case "grass": return <Wheat className="w-12 h-12 text-green-500" />;
+      case "tree": return <TreePine className="w-12 h-12 text-green-700" />;
+      case "flower": return <Flower className="w-12 h-12 text-pink-500" />;
+      case "moss": return <Leaf className="w-12 h-12 text-green-600" />;
+      case "fern": return <Leaf className="w-12 h-12 text-green-500" />;
+      case "cactus": return <Leaf className="w-12 h-12 text-green-600" />;
+      case "pine tree": return <TreePine className="w-12 h-12 text-green-800" />;
+      case "seaweed": return <Leaf className="w-12 h-12 text-teal-600" />;
+      
+      // Food
+      case "apple": return <Apple className="w-12 h-12 text-red-500" />;
+      case "honey": return <CupSoda className="w-12 h-12 text-amber-400" />;
+      case "mushroom": return <Mushroom className="w-12 h-12 text-stone-400" />;
+      case "berry": return <Cherry className="w-12 h-12 text-red-600" />;
+      case "nut": return <Cherry className="w-12 h-12 text-amber-800" />;
+      case "grain": return <Wheat className="w-12 h-12 text-amber-300" />;
+      case "nectar": return <CupSoda className="w-12 h-12 text-yellow-300" />;
+      
+      // Minerals
+      case "water": return <Water className="w-12 h-12 text-blue-500" />;
+      case "soil": return <Mountain className="w-12 h-12 text-amber-800" />;
+      case "rock": return <Rock className="w-12 h-12 text-gray-500" />;
+      case "sand": return <Mountain className="w-12 h-12 text-yellow-200" />;
+      case "clay": return <Mountain className="w-12 h-12 text-orange-300" />;
+      case "salt": return <Snowflake className="w-12 h-12 text-gray-100" />;
+      case "ice": return <Snowflake className="w-12 h-12 text-blue-100" />;
+      
+      // Weather
+      case "rain": return <Cloud className="w-12 h-12 text-blue-400" />;
+      case "cloud": return <Cloud className="w-12 h-12 text-gray-300" />;
+      case "sun": return <Sun className="w-12 h-12 text-yellow-400" />;
+      case "snow": return <Snowflake className="w-12 h-12 text-blue-100" />;
+      case "wind": return <Wind className="w-12 h-12 text-sky-300" />;
+      case "lightning": return <Cloud className="w-12 h-12 text-yellow-500" />;
+      case "rainbow": return <Rainbow className="w-12 h-12 text-violet-400" />;
+      case "fog": return <Cloud className="w-12 h-12 text-gray-200" />;
+      
+      // Default to category icons if no specific icon
+      default: return getCategoryIcon();
+    }
+  };
 
   const getCategoryIcon = () => {
     switch (category) {
@@ -49,6 +111,17 @@ const ElementCard = ({
     }
   };
 
+  const getCategoryBgColor = () => {
+    switch (category) {
+      case "animal": return "bg-blue-900";
+      case "plant": return "bg-green-900";
+      case "food": return "bg-red-900";
+      case "mineral": return "bg-gray-800";
+      case "weather": return "bg-sky-900";
+      default: return "bg-emerald-900";
+    }
+  };
+
   return (
     <div 
       className={cn(
@@ -65,8 +138,8 @@ const ElementCard = ({
           onError={() => setImageError(true)}
         />
       ) : (
-        <div className="w-full h-full bg-emerald-900 flex items-center justify-center">
-          {getCategoryIcon()}
+        <div className={`w-full h-full ${getCategoryBgColor()} flex items-center justify-center`}>
+          {getElementIcon()}
         </div>
       )}
       
