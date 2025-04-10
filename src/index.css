@@ -70,7 +70,7 @@
 
 .actor-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(155, 135, 245, 0.3);
+  box-shadow: 0 8px 20px rgba(52, 211, 153, 0.3);
 }
 
 .actor-card::after {
@@ -83,7 +83,7 @@
   background: linear-gradient(
     to bottom,
     transparent 70%,
-    rgba(26, 31, 44, 0.9) 100%
+    rgba(6, 78, 59, 0.9) 100%
   );
   border-radius: 0.5rem;
   z-index: 1;
@@ -100,12 +100,13 @@
   }
 }
 
-.movie-card {
+.element-card {
   transition: all 0.3s ease;
 }
 
-.movie-card:hover {
+.element-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(52, 211, 153, 0.3);
 }
 
 .path-node {
@@ -122,15 +123,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(260, 15%, 15%);
+  background: hsl(160, 80%, 15%);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(265, 83%, 65%);
+  background: hsl(160, 84%, 39%);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(265, 83%, 75%);
+  background: hsl(160, 84%, 49%);
 }

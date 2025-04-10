@@ -1,12 +1,12 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { getRandomActorChallenge } from "@/data/movieData";
-import { Actor } from "@/data/movieData";
+import { getRandomElementChallenge } from "@/data/elementsData";
+import { Element } from "@/data/elementsData";
 import { useToast } from "@/components/ui/use-toast";
 
 interface GameControlsProps {
-  onNewGame: (start: Actor, target: Actor) => void;
+  onNewGame: () => void;
   onCheckPath: () => void;
   pathLength: number;
   isComplete: boolean;
@@ -22,12 +22,11 @@ const GameControls = ({
   const [difficultyLevel, setDifficultyLevel] = useState<"easy" | "medium" | "hard">("easy");
   
   const handleNewGame = () => {
-    const challenge = getRandomActorChallenge();
-    onNewGame(challenge.start, challenge.target);
+    onNewGame();
     
     toast({
       title: "New challenge started!",
-      description: `Connect ${challenge.start.name} to ${challenge.target.name} using the fewest possible moves.`,
+      description: "Connect the elements using the fewest possible links.",
     });
   };
   
@@ -36,7 +35,7 @@ const GameControls = ({
   };
   
   return (
-    <div className="w-full bg-cinema-darkPurple rounded-lg p-4 mb-6 animate-fade-in">
+    <div className="w-full bg-emerald-900 bg-opacity-70 rounded-lg p-4 mb-6 animate-fade-in">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="flex flex-col space-y-2">
           <span className="text-white text-sm font-medium">Difficulty</span>
@@ -44,21 +43,21 @@ const GameControls = ({
             <Button
               variant={difficultyLevel === "easy" ? "default" : "outline"}
               onClick={() => setDifficultyLevel("easy")}
-              className="flex-1 bg-cinema-purple hover:bg-cinema-accent text-white"
+              className="flex-1 bg-green-600 hover:bg-green-700 text-white"
             >
               Easy
             </Button>
             <Button
               variant={difficultyLevel === "medium" ? "default" : "outline"}
               onClick={() => setDifficultyLevel("medium")}
-              className="flex-1 bg-cinema-purple hover:bg-cinema-accent text-white"
+              className="flex-1 bg-green-600 hover:bg-green-700 text-white"
             >
               Medium
             </Button>
             <Button
               variant={difficultyLevel === "hard" ? "default" : "outline"}
               onClick={() => setDifficultyLevel("hard")}
-              className="flex-1 bg-cinema-purple hover:bg-cinema-accent text-white"
+              className="flex-1 bg-green-600 hover:bg-green-700 text-white"
             >
               Hard
             </Button>
@@ -67,15 +66,15 @@ const GameControls = ({
         
         <div className="flex flex-col space-y-2">
           <span className="text-white text-sm font-medium">Current Score</span>
-          <div className="bg-cinema-darkPurple border border-cinema-purple rounded-lg p-2 text-center">
+          <div className="bg-emerald-900 border border-green-600 rounded-lg p-2 text-center">
             <span className="text-xl font-bold text-white">
               {isComplete ? (
                 <span className="text-green-400">
-                  {pathLength} {pathLength === 1 ? "move" : "moves"}
+                  {pathLength} {pathLength === 1 ? "link" : "links"}
                 </span>
               ) : (
-                <span className="text-cinema-purple">
-                  {pathLength} {pathLength === 1 ? "move" : "moves"}
+                <span className="text-green-400">
+                  {pathLength} {pathLength === 1 ? "link" : "links"}
                 </span>
               )}
             </span>
@@ -93,7 +92,7 @@ const GameControls = ({
             </Button>
             <Button 
               onClick={handleCheckPath}
-              className="flex-1 bg-cinema-purple hover:bg-cinema-accent text-white"
+              className="flex-1 bg-green-600 hover:bg-green-700 text-white"
               disabled={isComplete}
             >
               Check Path
