@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { ElementCategory } from "@/data/elementsData";
 import { 
   Leaf, Cloud, Apple, Mountain, Fish, Bird, 
-  Tree, Flower, Cherry, Wheat, Cup, 
+  Trees, Flower, Cherry, Wheat, Glass, 
   Droplet, Shell, Snowflake, Sun, Wind, Rainbow 
 } from "lucide-react";
 import { useState } from "react";
@@ -36,28 +36,28 @@ const ElementCard = ({
       case "bee": return <Leaf className="w-12 h-12 text-yellow-400" />;
       case "butterfly": return <Flower className="w-10 h-10 text-pink-400" />;
       case "frog": return <Fish className="w-12 h-12 text-green-500" />;
-      case "bear": return <Fish className="w-12 h-12 text-brown-400" />;
+      case "bear": return <Fish className="w-12 h-12 text-amber-700" />;
       case "deer": return <Fish className="w-12 h-12 text-amber-600" />;
       case "owl": return <Bird className="w-12 h-12 text-amber-800" />;
       
       // Plants
       case "grass": return <Wheat className="w-12 h-12 text-green-500" />;
-      case "tree": return <Tree className="w-12 h-12 text-green-700" />;
+      case "tree": return <Trees className="w-12 h-12 text-green-700" />;
       case "flower": return <Flower className="w-12 h-12 text-pink-500" />;
       case "moss": return <Leaf className="w-12 h-12 text-green-600" />;
       case "fern": return <Leaf className="w-12 h-12 text-green-500" />;
       case "cactus": return <Leaf className="w-12 h-12 text-green-600" />;
-      case "pine tree": return <Tree className="w-12 h-12 text-green-800" />;
+      case "pine tree": return <Trees className="w-12 h-12 text-green-800" />;
       case "seaweed": return <Leaf className="w-12 h-12 text-teal-600" />;
       
       // Food
       case "apple": return <Apple className="w-12 h-12 text-red-500" />;
-      case "honey": return <Cup className="w-12 h-12 text-amber-400" />;
+      case "honey": return <Glass className="w-12 h-12 text-amber-400" />;
       case "mushroom": return <Leaf className="w-12 h-12 text-stone-400" />;
       case "berry": return <Cherry className="w-12 h-12 text-red-600" />;
       case "nut": return <Cherry className="w-12 h-12 text-amber-800" />;
       case "grain": return <Wheat className="w-12 h-12 text-amber-300" />;
-      case "nectar": return <Cup className="w-12 h-12 text-yellow-300" />;
+      case "nectar": return <Glass className="w-12 h-12 text-yellow-300" />;
       
       // Minerals
       case "water": return <Droplet className="w-12 h-12 text-blue-500" />;
