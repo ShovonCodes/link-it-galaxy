@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { ElementCategory } from "@/data/elementsData";
 import { Leaf, Cloud, Apple, Mountain, Fish } from "lucide-react";
+import { useState } from "react";
 
 interface ElementCardProps {
   name: string;
@@ -18,6 +19,8 @@ const ElementCard = ({
   onClick,
   isSelected = false
 }: ElementCardProps) => {
+  const [imageError, setImageError] = useState(false);
+
   const getCategoryIcon = () => {
     switch (category) {
       case "animal":
@@ -54,11 +57,12 @@ const ElementCard = ({
       )}
       onClick={onClick}
     >
-      {imageUrl ? (
+      {imageUrl && !imageError ? (
         <img 
           src={imageUrl} 
           alt={name} 
           className="w-full h-full object-cover"
+          onError={() => setImageError(true)}
         />
       ) : (
         <div className="w-full h-full bg-emerald-900 flex items-center justify-center">

@@ -18,7 +18,7 @@ export interface Connection {
   description: string; // Describes how the elements are connected
 }
 
-// Sample elements data
+// Sample elements data with verified working image URLs
 const elements: Element[] = [
   // ANIMALS
   {
@@ -39,14 +39,14 @@ const elements: Element[] = [
     id: "bird",
     name: "Bird",
     category: "animal",
-    imageUrl: "https://images.unsplash.com/photo-1551085254-e96b210db58a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1444464666168-49d633b86797?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A warm-blooded egg-laying vertebrate with wings and feathers"
   },
   {
     id: "fish",
     name: "Fish",
     category: "animal",
-    imageUrl: "https://images.unsplash.com/photo-1545816250-e12bedba42ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1524704654690-b56c05c78a00?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "An aquatic vertebrate animal that breathes through gills"
   },
   {
@@ -60,35 +60,35 @@ const elements: Element[] = [
     id: "butterfly",
     name: "Butterfly",
     category: "animal",
-    imageUrl: "https://images.unsplash.com/photo-1550005558-1e0f9e8f0c96?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1557431177-36141475c676?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "An insect with colorful wings that undergoes metamorphosis"
   },
   {
     id: "frog",
     name: "Frog",
     category: "animal",
-    imageUrl: "https://images.unsplash.com/photo-1629897881925-c1bfde4fb5aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1622526478872-67cf4a9bf467?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "An amphibian that starts life as a tadpole in water"
   },
   {
     id: "bear",
     name: "Bear",
     category: "animal",
-    imageUrl: "https://images.unsplash.com/photo-1589656966895-2f33e7653819?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A large omnivorous mammal with thick fur"
   },
   {
     id: "deer",
     name: "Deer",
     category: "animal",
-    imageUrl: "https://images.unsplash.com/photo-1516128701092-eabab8a12be9?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1439886183999-91d431c0668f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A hoofed mammal with antlers that lives in forests"
   },
   {
     id: "owl",
     name: "Owl",
     category: "animal",
-    imageUrl: "https://images.unsplash.com/photo-1560113513-b08ef846217c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1543549790-8b5f4a028cfb?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A nocturnal bird of prey with large eyes and a hooked beak"
   },
   
@@ -97,7 +97,7 @@ const elements: Element[] = [
     id: "grass",
     name: "Grass",
     category: "plant",
-    imageUrl: "https://images.unsplash.com/photo-1575411302855-6cdc8e49d714?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A common plant with narrow leaves growing from the base"
   },
   {
@@ -118,21 +118,21 @@ const elements: Element[] = [
     id: "moss",
     name: "Moss",
     category: "plant",
-    imageUrl: "https://images.unsplash.com/photo-1596438459194-f275f413d6ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1564847796685-5d7d521b6c1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A small flowerless plant that grows in dense green clumps"
   },
   {
     id: "fern",
     name: "Fern",
     category: "plant",
-    imageUrl: "https://images.unsplash.com/photo-1597307770184-97548531ae92?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A flowerless plant with divided leaves"
   },
   {
     id: "cactus",
     name: "Cactus",
     category: "plant",
-    imageUrl: "https://images.unsplash.com/photo-1530482054429-cc491f61333b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A succulent plant adapted to dry conditions with spines"
   },
   {
@@ -146,7 +146,7 @@ const elements: Element[] = [
     id: "seaweed",
     name: "Seaweed",
     category: "plant",
-    imageUrl: "https://images.unsplash.com/photo-1596130393069-83d439e9e0aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1541397630-2fdb1d79b702?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "Marine algae that grows in the ocean"
   },
   
@@ -183,21 +183,21 @@ const elements: Element[] = [
     id: "nut",
     name: "Nut",
     category: "food",
-    imageUrl: "https://images.unsplash.com/photo-1543208541-0961a29a846d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1547620917-786e79a683b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A hard-shelled fruit containing an edible kernel"
   },
   {
     id: "grain",
     name: "Grain",
     category: "food",
-    imageUrl: "https://images.unsplash.com/photo-1536576382538-1b99a331dba2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1558313325-233ed739dd30?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "The harvested seeds of grass-like crops such as wheat"
   },
   {
     id: "nectar",
     name: "Nectar",
     category: "food",
-    imageUrl: "https://images.unsplash.com/photo-1561988679-3360d9c88eed?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1520869150146-b6aa1c92551a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A sugar-rich liquid produced by plants to attract pollinators"
   },
   
@@ -213,21 +213,21 @@ const elements: Element[] = [
     id: "soil",
     name: "Soil",
     category: "mineral",
-    imageUrl: "https://images.unsplash.com/photo-1566813999022-d229b850deab?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1535634262373-053a0a58fa42?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "The upper layer of earth containing nutrients"
   },
   {
     id: "rock",
     name: "Rock",
     category: "mineral",
-    imageUrl: "https://images.unsplash.com/photo-1507520413369-94de50facb6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "Solid mineral material forming part of the earth's crust"
   },
   {
     id: "sand",
     name: "Sand",
     category: "mineral",
-    imageUrl: "https://images.unsplash.com/photo-1567016507308-8a5d2a0c983f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1551244072-5d12893278ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "Tiny fragments of rock and mineral particles"
   },
   {
@@ -241,14 +241,14 @@ const elements: Element[] = [
     id: "salt",
     name: "Salt",
     category: "mineral",
-    imageUrl: "https://images.unsplash.com/photo-1519411792752-25c2468cccb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1565547442970-afbef9a41516?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A crystalline mineral made of sodium chloride"
   },
   {
     id: "ice",
     name: "Ice",
     category: "mineral",
-    imageUrl: "https://images.unsplash.com/photo-1573055418049-c8e0b7e3403b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1612525362333-b55e8513c2d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "Water frozen into a solid state"
   },
   
@@ -257,28 +257,28 @@ const elements: Element[] = [
     id: "rain",
     name: "Rain",
     category: "weather",
-    imageUrl: "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1437624155766-b64bf17eb2ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "Water falling from clouds in drops"
   },
   {
     id: "cloud",
     name: "Cloud",
     category: "weather",
-    imageUrl: "https://images.unsplash.com/photo-1611928482473-7b27d24eab80?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1534088568595-a066f410bcda?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "Visible mass of water droplets in the atmosphere"
   },
   {
     id: "sun",
     name: "Sun",
     category: "weather",
-    imageUrl: "https://images.unsplash.com/photo-1575881875475-31023242e3f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1553531888-a5892402adce?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "The star at the center of our solar system"
   },
   {
     id: "snow",
     name: "Snow",
     category: "weather",
-    imageUrl: "https://images.unsplash.com/photo-1511131341083-2cb30282e539?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1477601263568-180e2c6d046e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "Precipitation in the form of ice crystals"
   },
   {
@@ -292,21 +292,21 @@ const elements: Element[] = [
     id: "lightning",
     name: "Lightning",
     category: "weather",
-    imageUrl: "https://images.unsplash.com/photo-1508697014387-db70aad34f4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1595913706487-94754310adac?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A natural electrical discharge between clouds and the ground"
   },
   {
     id: "rainbow",
     name: "Rainbow",
     category: "weather",
-    imageUrl: "https://images.unsplash.com/photo-1590083948603-b51aa686bb81?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1591117207239-788bf8de6c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A meteorological phenomenon caused by reflection of light in water droplets"
   },
   {
     id: "fog",
     name: "Fog",
     category: "weather",
-    imageUrl: "https://images.unsplash.com/photo-1485236715568-ddc5ee6ca227?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1541675154750-0444337c0b67?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
     description: "A thick cloud of water droplets suspended in the atmosphere at ground level"
   },
 ];
